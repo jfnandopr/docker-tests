@@ -32,8 +32,6 @@ jobs:
           context: base
           load: true
           tags: user/tomcat-base:latest
-          cache-from: type=registry,ref=user/tomcat-base:buildcache
-          cache-to: type=registry,ref=user/tomcat-base:buildcache,mode=max
 
       - name: Images Verify
         run: docker image ls -a
@@ -42,3 +40,5 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: ${{ matrix.context }}
+          load: true
+          
