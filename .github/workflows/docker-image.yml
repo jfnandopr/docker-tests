@@ -36,10 +36,6 @@ jobs:
       - name: Images Verify
         run: docker image ls -a
 
-      - name: Test
-        run: |
-          docker run --rm user/tomcat-base
-
       - name: Build and Export to Docker
         uses: docker/build-push-action@v3
         with:
