@@ -32,6 +32,7 @@ jobs:
           context: base
           load: true
           tags: user/tomcat-base
+          push: true
           cache-from: type=registry,ref=user/tomcat-base:latest
           cache-to: type=inline
 
