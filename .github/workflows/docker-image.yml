@@ -32,6 +32,8 @@ jobs:
           context: base
           load: true
           tags: user/tomcat-base
+          cache-from: type=registry,ref=user/tomcat-base:latest
+          cache-to: type=inline
 
       - name: Images Verify
         run: docker image ls -a
