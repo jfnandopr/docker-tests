@@ -34,7 +34,7 @@ jobs:
           tags: tomcat-base
 
       - name: Images Verify
-        run: docker images ls
+        run: docker image ls -a
 
       - name: Build and Export to Docker
         uses: docker/build-push-action@v3
