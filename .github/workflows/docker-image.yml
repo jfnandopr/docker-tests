@@ -32,7 +32,6 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: base
-          load: true
           tags: user/tomcat-base:latest
 
       - name: Images Verify
