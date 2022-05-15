@@ -26,13 +26,16 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
-      - name: Build and Export to Docker
+      - name: Build and Export Base to Docker
         uses: docker/build-push-action@v3
         with:
           context: base
           tags: tomcat-base
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+      - name: Images Verify
+        run: docker images ls
 
       - name: Build and Export to Docker
         uses: docker/build-push-action@v3
