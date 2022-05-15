@@ -32,8 +32,6 @@ jobs:
           context: base
           load: true
           tags: tomcat-base
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
 
       - name: Images Verify
         run: docker images ls
